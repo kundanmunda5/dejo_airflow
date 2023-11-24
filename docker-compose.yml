@@ -1,0 +1,14 @@
+version: '1'
+
+services:
+  dejo:
+    image: dejo-airflow:latest
+
+    volumes:
+      - ./dejo_airflow:/opt/airflow
+
+    ports:
+      - "8080:8080"
+
+    command:  airflow standalone
+
